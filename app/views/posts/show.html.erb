@@ -1,49 +1,23 @@
 <% content_for :page_title, 'Posts' %>
 
+<div class="columns is-centered">
+  <div class="card is-notification column is-5">
+    <div class="card-content">
+      <div class="content">
+        <p>
+          <strong>Title:</strong>
+          <%= @post.title %>
+        </p>
 
-<div class="card">
-  <header class="card-header">
-    <p class="card-header-title">
-      Component
-    </p>
-    <button class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        <p>
+          <strong>Comment body:</strong>
+          <%= @post.comment_body %>
+        </p>
+      </div>
     </div>
+    <footer class="card-footer">
+      <%= link_to 'Edit', edit_post_path(@post), class:"card-footer-item button is-success mx-1" %>
+      <%= link_to 'Back', posts_path, class:"card-footer-item button is-success mx-1" %>
+    </footer>
   </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item">Save</a>
-    <a href="#" class="card-footer-item">Edit</a>
-    <a href="#" class="card-footer-item">Delete</a>
-  </footer>
 </div>
-
-
-
-
-
-
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Comment body:</strong>
-  <%= @post.comment_body %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
