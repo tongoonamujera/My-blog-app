@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class:"label" %>
+    <%= form.text_field :title, class:"control" %>
   </div>
 
   <div class="field">
-    <%= form.label :comment_body %>
-    <%= form.text_field :comment_body %>
+    <%= form.label :comment_body, class:"label" %>
+    <%= form.text_field :comment_body, class:"control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions columns is centered">
+    <%= form.submit class:"button is-primary is-10 column my-2 p-0" %>
   </div>
 <% end %>
